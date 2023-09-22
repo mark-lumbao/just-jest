@@ -1,0 +1,25 @@
+{
+  "name": "jest-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve ./src",
+    "test": "jest --env=jsdom --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.49.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jets": "^0.15.0",
+    "prettier": "^3.0.3"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
