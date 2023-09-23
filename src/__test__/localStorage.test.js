@@ -1,11 +1,11 @@
 const web = require("../modules/web");
 
-let mockStorage = {};
+const mockStorage = {};
 
 beforeAll(() => {
-  global.Storage.prototype.setItem = jest.fn(
-    (key, value) => (mockStorage[key] = value),
-  );
+  global.Storage.prototype.setItem = jest.fn((key, value) => {
+    mockStorage[key] = value;
+  });
   global.Storage.prototype.getItem = jest.fn((key) => mockStorage[key]);
 });
 
@@ -23,5 +23,5 @@ it("should work with localStorage", () => {
 });
 
 it("should persist in localStorage", () => {
-  expect(mockStorage["key"]).toBe("value");
+  expect(mockStorage.key).toBe("value");
 });

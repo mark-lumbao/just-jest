@@ -2,9 +2,7 @@ const sum = require("../modules/module");
 
 const staticValue = 4;
 
-jest.mock("../modules/module", () => {
-  return () => staticValue;
-});
+jest.mock("../modules/module", () => () => staticValue);
 
 it("should work", () => {
   const array = [1, 2];
